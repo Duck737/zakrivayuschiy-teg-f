@@ -310,12 +310,32 @@
   animation: sparks 0.3s ease-in 0.3s forwards;
 }
 
-.filter__clean {
-  filter: saturate(27%);
+.filter-saturate {
+  filter: saturate(110%);
 }
 
-.filter__negative {
+.filter-negative {
   filter: invert(75%);
+}
+
+.filter-sepia {
+  filter: sepia(89%);
+}
+
+.filter-hue {
+  filter: hue-rotate(90deg);
+}
+
+.filter-grayscale {
+  filter: grayscale(95%);
+}
+
+.filter-blur {
+  filter: blur(5px);
+}
+
+.filter-contrast {
+  filter: contrast(200%);
 }
 
 @media (width >= 376px) {
