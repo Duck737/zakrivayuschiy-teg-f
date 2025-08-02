@@ -12,8 +12,8 @@
 
 .page {
   margin-inline: auto;
-  padding-block: 100px; 
-  font-family: var(--main-font); /*найти альтернативный шрифт*/
+  padding-block: 100px;
+  font-family: var(--main-font);
   background-image: var(--background);
   background-size: cover;
   background-attachment: fixed;
@@ -23,16 +23,16 @@
 }
 
 .header {
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- align-items: center;
- gap: 19px; 
- margin-block-end: 100px;
- border: 2px solid var(--accent-color);
- padding: 120px 16px;
- font-family: var(--accent-font);
- background-color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 19px;
+  margin-block-end: 100px;
+  border: 2px solid var(--accent-color);
+  padding: 120px 16px;
+  font-family: var(--accent-font);
+  background-color: var(--main-color);
 }
 
 .header__title {
@@ -52,7 +52,7 @@
 
 .content__section {
   border: 2px solid var(--accent-color);
-  background-color: var(--main-color); 
+  background-color: var(--main-color);
 }
 
 .content__section-title,
@@ -79,11 +79,17 @@
   font-family: var(--accent-font);
   font-size: var(--sm-font-size);
   mix-blend-mode: hard-light;
-  @supports (-webkit-text-stroke: 1px var(--main-color)) {
+}
+
+@supports (-webkit-text-stroke: 1px var(--main-color)) {
+  .content__section-label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--main-color);
   }
-  @supports not (-webkit-text-stroke: 1px var(--main-color)) {
+}
+
+@supports not (-webkit-text-stroke: 1px var(--main-color)) {
+  .content__section-label {
     text-shadow:
       -1px -1px 0 var(--main-color),
        1px -1px 0 var(--main-color),
@@ -91,13 +97,12 @@
        1px  1px 0 var(--main-color);
   }
 }
-
 .content__section-image {
   display: block;
-  aspect-ratio: 1 / 1;
   width: 100%;
   object-fit: cover;
   object-position: center;
+  aspect-ratio: 1 / 1;
 }
 
 .content__section-text-wrapper {
@@ -108,43 +113,43 @@
 }
 
 .content__section-text {
-  font-variation-settings: "wght" 410;
   line-height: 21px;
+  font-variation-settings: "wght" 410;
 }
 
 .content__section-actions-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 25px 25px 20px;
   gap: 5px;
+  padding: 25px 25px 20px;
 }
 
 .button {
   position: relative;
   border: 2px solid var(--accent-color);
-  background-color: var(--main-color);
   box-shadow: 2px 2px 0 transparent;
+  background-color: var(--main-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .button:focus {
-  outline: none;
   box-shadow: 2px 2px 0 var(--accent-color);
+  outline: none;
 }
 
 .button::before {
   content: "";
-  width: 100%;
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   height: 100%;
-  position: absolute;
-  transform: scaleX(0);
-  transform-origin: left;
   background: var(--accent-color);
   transition: transform 0.5s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
 .button:hover::before {
@@ -152,11 +157,11 @@
 }
 
 .card__icon-button {
-  background-color: var(--main-color);
   border: 2px solid transparent;
   padding: 0;
+  background-color: var(--main-color);
   transition: border 0.3s ease;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -167,7 +172,7 @@
   border-color: var(--accent-color);
 }
 
-.card__like-button { 
+.card__like-button {
   width: 130px;
   padding: 8.5px 0 6px;
 }
@@ -177,8 +182,8 @@
   flex-direction: column;
   align-items: center;
   gap: 11px;
-  padding: 13px 18px;
   margin: 0 auto;
+  padding: 13px 18px;
 }
 
 .content__section-button svg {
@@ -231,12 +236,12 @@
 }
 
 .button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--main-color);
   font-family: var(--accent-font);
   font-size: var(--sm-font-size);
   line-height: 90%;
-  color: var(--main-color);
-  position: relative;
-  z-index: 1;
   mix-blend-mode: difference;
 }
 
@@ -254,8 +259,8 @@
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
-  transition-duration: 0.3s;
   transition-delay: 0.06s;
+  transition-duration: 0.3s;
 }
 
 .main-body {
@@ -315,8 +320,8 @@
 
 @media (width >= 376px) {
   .header {
-    padding: 128px 0 130px;
     margin-block-end: 96px;
+    padding: 128px 0 130px;
   }
   
   .content__section-button {
@@ -325,7 +330,7 @@
   }
 
   .content__section-button svg {
-  max-width: 21px;
-  height: auto;
-}
+    max-width: 21px;
+    height: auto;
+  }
 }

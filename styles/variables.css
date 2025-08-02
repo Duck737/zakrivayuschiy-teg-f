@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --accent-font: 'PressStart2P';
-  --main-font: 'Inter';
+  --accent-font: 'PressStart2P', Courier, monospace;
+  --main-font: 'Inter', Arial, sans-serif;
   --background: repeating-linear-gradient(
       to right,
       #d3d3d3 0,
