@@ -197,6 +197,11 @@
 
 .content__dialog {
   display: none;
+  gap: 30px;
+  width: 341px;
+  padding: 30px 40px;
+  font-family: var(--accent-font);
+  font-size: var(--sm-font-size);
 }
 
 .content__dialog::backdrop {
@@ -207,11 +212,6 @@
 .content__dialog[open] {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 341px;
-  padding: 30px 40px;
-  font-family: var(--accent-font);
-  font-size: var(--sm-font-size);
 }
 
 .content__dialog-text-wrapper svg {
@@ -341,6 +341,7 @@
 
 .filter-mixed {
   filter: grayscale(100%) blur(3px);
+  overflow: hidden;
 }
 
 @media (width >= 376px) {
