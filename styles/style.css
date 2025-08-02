@@ -338,6 +338,10 @@
   filter: contrast(200%);
 }
 
+.filter-mixed {
+  filter: grayscale(100%) blur(3px);
+}
+
 @media (width >= 376px) {
   .header {
     margin-block-end: 96px;
